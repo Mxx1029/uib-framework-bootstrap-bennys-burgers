@@ -1,2 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+
+// Colors: 
+$primary: #e83e8c;
+$white: #eee;
+$bg-icon: #dedede;
+
+// Typography: 
+$benny-font: 'Love Ya Like A Sister', cursive;
+$display1-size: 6rem;
+$display2-size: 3.5rem;
+
 // This is where you can import other stylesheets or write your scss code
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    nav {
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        .navbar-brand {
+            img {
+                padding-right: .5rem;
+            }
+        }
+    }
+}
+
+
+.navbar-toggler {
+    color: $primary;
+}
+
+.hero {
+    background-image: url(../images/lidye-1Shk_PkNkNw-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 40vh;
+    position: absolute;
+    top: 0;
+    .hero-body {
+        color: $white;
+        padding: 12% 0 0 5%;
+    }
+    h1 {
+        font-family: $benny-font;
+    }
+    a {
+        padding: .5rem 0.75rem;
+    }
+}
+
+#mission {
+    margin-top: 40vh;
+    h2 {
+        font-family: 
+        $benny-font;
+    }
+    .mission-cards {
+        .row {
+            .mission-card-body {
+                .img-care {
+                    width: 75px;
+                    height: 75px;
+                    background: url(../images/care.svg), $bg-icon
+                }
+                h3 {
+                    font-family: $benny-font;
+                }
+            }
+        }
+    }
+}
