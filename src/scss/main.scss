@@ -3,12 +3,21 @@
 // Colors: 
 $primary: #e83e8c;
 $white: #eee;
-$bg-icon: #dedede;
+$bg-dark: #000;
 
 // Typography: 
 $benny-font: 'Love Ya Like A Sister', cursive;
 $display1-size: 6rem;
 $display2-size: 3.5rem;
+$display3-size: 2.75rem;
+$display4-size: 1.75rem;
+$lead-font-size: 2rem;
+
+// Spacing:
+$form-group-margin-bottom: 1.5rem;
+
+// Borders:
+$enable-rounded:  false !default;
 
 // This is where you can import other stylesheets or write your scss code
 @import "../../node_modules/bootstrap/scss/bootstrap";
@@ -19,13 +28,30 @@ $display2-size: 3.5rem;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h5 {
+    font-family: $benny-font;
+}
+
 header {
     position: sticky;
     top: 0;
+    z-index: 1000;
+    height: 50vh;
     nav {
         position: absolute;
         top: 0;
-        z-index: 100;
+        z-index: 1000;
         .navbar-brand {
             img {
                 padding-right: .5rem;
@@ -33,7 +59,6 @@ header {
         }
     }
 }
-
 
 .navbar-toggler {
     color: $primary;
@@ -44,15 +69,12 @@ header {
     background-size: cover;
     background-position: bottom;
     width: 100%;
-    height: 40vh;
+    height: 100%;
     position: absolute;
     top: 0;
     .hero-body {
         color: $white;
         padding: 12% 0 0 5%;
-    }
-    h1 {
-        font-family: $benny-font;
     }
     a {
         padding: .5rem 0.75rem;
@@ -60,23 +82,150 @@ header {
 }
 
 #mission {
-    margin-top: 40vh;
-    h2 {
-        font-family: 
-        $benny-font;
-    }
+    scroll-margin-top: 50rem;
     .mission-cards {
         .row {
-            .mission-card-body {
+            .mission-card {
                 .img-care {
                     width: 75px;
                     height: 75px;
-                    background: url(../images/care.svg), $bg-icon
+                        img {
+                            width: 70%;
+                            height: 70%;
+                        }
                 }
-                h3 {
-                    font-family: $benny-font;
+                .img-plant {
+                    width: 75px;
+                    height: 75px;
+                        img {
+                            width: 70%;
+                            height: 70%;
+                        }
+                }
+                .img-heart {
+                    width: 75px;
+                    height: 75px;
+                    img {
+                        width: 70%;
+                        height: 70%;
+                    }
                 }
             }
         }
     }
+}
+
+#news {
+    scroll-margin-top: 42rem;
+    .news-container {
+        width: 100vw;
+        overflow-x: auto;
+        .card {
+            height: 100%;
+        }
+    }
+}
+
+#contact {
+    form {
+        width: 50vw;
+    }
+}
+
+footer {
+    background: $bg-dark;
+    height: 4rem;
+    line-height: 4rem;
+}
+
+@include media-breakpoint-down(md) {
+    .navbar-nav {
+        display: none;
+    }
+
+    header {
+        height: 39vh;
+    }
+
+    .hero-body {
+        margin-top: 2.25rem;
+        margin-left: 2.5rem;
+        h1 {
+            font-size: $display2-size;
+            width: 50%;
+        }
+    }
+
+    #mission {
+        h2 {
+            font-size: $display3-size;
+        }
+        .row {
+            .mission-card {
+                h3 {
+                    font-size: $display4-size;
+                }
+            }
+        }
+    }
+    
+    #news {
+        h2 {
+            font-size: $display3-size;
+        }
+    }  
+    
+    #contact {
+        h2 {
+            font-size: $display3-size;
+        }
+    }   
+}
+
+@include media-breakpoint-down(sm) {
+    .navbar-nav {
+        display: none;
+    }
+
+    header {
+        height: 50vh;
+    }
+
+    .hero-body {
+        margin-top: 4.5rem;
+        margin-left: .5rem;
+        h1 {
+            font-size: $display3-size;
+            line-height: 2.75rem;
+            width: 60%;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    #mission {
+        h2 {
+            font-size: $display4-size;
+        }
+        .row {
+            .mission-card {
+                h3 {
+                    font-size: 1.17rem;
+                }
+            }
+        }
+    }
+    
+    #news {
+        h2 {
+            font-size: $display4-size;
+        }
+    }  
+    
+    #contact {
+        h2 {
+            font-size: $display3-size;
+        }
+    }   
 }
