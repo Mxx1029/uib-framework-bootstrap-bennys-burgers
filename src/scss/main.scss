@@ -47,11 +47,9 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 50vh;
+    height: 5%;
     nav {
-        position: absolute;
-        top: 0;
-        z-index: 1000;
+        background: linear-gradient($bg-dark, transparent 90%);
         .navbar-brand {
             img {
                 padding-right: .5rem;
@@ -67,14 +65,13 @@ header {
 .hero {
     background-image: url(../images/lidye-1Shk_PkNkNw-unsplash.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position: 0% 80%;
     width: 100%;
-    height: 100%;
+    height: 40vh;
     position: absolute;
     top: 0;
     .hero-body {
         color: $white;
-        padding: 12% 0 0 5%;
     }
     a {
         padding: .5rem 0.75rem;
@@ -82,7 +79,9 @@ header {
 }
 
 #mission {
-    scroll-margin-top: 50rem;
+    position: relative;
+    top: 40vh;
+    scroll-margin-top: 4rem;
     .mission-cards {
         .row {
             .mission-card {
@@ -116,7 +115,9 @@ header {
 }
 
 #news {
-    scroll-margin-top: 42rem;
+    position: relative;
+    top: 40vh;
+    scroll-margin-top: 0;
     .news-container {
         width: 100vw;
         overflow-x: auto;
@@ -127,13 +128,17 @@ header {
 }
 
 #contact {
-    scroll-margin-top: 45rem;
+    position: relative;
+    top: 40vh;
+    scroll-margin-top: 0;
     form {
         width: 50vw;
     }
 }
 
 footer {
+    position: relative;
+    top: 40vh;
     background: $bg-dark;
     height: 4rem;
     line-height: 4rem;
