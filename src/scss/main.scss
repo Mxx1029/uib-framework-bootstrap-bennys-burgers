@@ -145,24 +145,35 @@ footer {
 }
 
 @include media-breakpoint-down(md) {
-    .navbar-nav {
-        display: none;
+
+    .collapse {
+        .navbar-nav {
+            display: none;
+        }
     }
 
+    .navbar-toggler:focus ~ .collapse > .navbar-nav,   
+    .navbar-toggler:hover ~ .collapse > .navbar-nav {
+        display: block;
+    } // somehow the bootstrap dropdown doesn't work. 
+    // this is a work around, but you can't select anything from the dropdown, as it vanishes. Any tip how to fix this?
+
     header {
-        height: 39vh;
+        height: 25vh;
     }
 
     .hero-body {
-        margin-top: 2.25rem;
-        margin-left: 2.5rem;
         h1 {
-            font-size: $display2-size;
+            font-size: 5rem;
             width: 50%;
+        }
+        p {
+            font-size: 1.5rem;
         }
     }
 
     #mission {
+        top: 20vh;
         h2 {
             font-size: $display3-size;
         }
@@ -176,30 +187,31 @@ footer {
     }
     
     #news {
+        top: 25vh;
         h2 {
             font-size: $display3-size;
         }
     }  
     
     #contact {
+        top: 25vh;
         h2 {
             font-size: $display3-size;
         }
     }   
+
+    footer {
+        top: 25vh;
+    }
 }
 
 @include media-breakpoint-down(sm) {
-    .navbar-nav {
-        display: none;
-    }
 
     header {
-        height: 50vh;
+        height: 30vh;
     }
 
     .hero-body {
-        margin-top: 4.5rem;
-        margin-left: .5rem;
         h1 {
             font-size: $display3-size;
             line-height: 2.75rem;
@@ -207,6 +219,10 @@ footer {
         }
         p {
             font-size: 1rem;
+        }
+        a {
+            font-size: 0.8rem;
+            padding: 0.25 0.5rem;
         }
     }
 
