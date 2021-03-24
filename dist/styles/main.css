@@ -9445,12 +9445,10 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 50vh;
+  height: 5%;
 }
 header nav {
-  position: absolute;
-  top: 0;
-  z-index: 1000;
+  background: linear-gradient(#000, transparent 90%);
 }
 header nav .navbar-brand img {
   padding-right: 0.5rem;
@@ -9463,22 +9461,23 @@ header nav .navbar-brand img {
 .hero {
   background-image: url(../images/lidye-1Shk_PkNkNw-unsplash.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: 0% 80%;
   width: 100%;
-  height: 100%;
+  height: 40vh;
   position: absolute;
   top: 0;
 }
 .hero .hero-body {
   color: #eee;
-  padding: 12% 0 0 5%;
 }
 .hero a {
   padding: 0.5rem 0.75rem;
 }
 
 #mission {
-  scroll-margin-top: 50rem;
+  position: relative;
+  top: 40vh;
+  scroll-margin-top: 4rem;
 }
 #mission .mission-cards .row .mission-card .img-care {
   width: 75px;
@@ -9506,7 +9505,9 @@ header nav .navbar-brand img {
 }
 
 #news {
-  scroll-margin-top: 42rem;
+  position: relative;
+  top: 40vh;
+  scroll-margin-top: 0;
 }
 #news .news-container {
   width: 100vw;
@@ -9516,34 +9517,48 @@ header nav .navbar-brand img {
   height: 100%;
 }
 
+#contact {
+  position: relative;
+  top: 40vh;
+  scroll-margin-top: 0;
+}
 #contact form {
   width: 50vw;
 }
 
 footer {
+  position: relative;
+  top: 40vh;
   background: #000;
   height: 4rem;
   line-height: 4rem;
 }
 
 @media (max-width: 991.98px) {
-  .navbar-nav {
+  .collapse .navbar-nav {
     display: none;
   }
 
-  header {
-    height: 39vh;
+  .navbar-toggler:focus ~ .collapse > .navbar-nav,
+.navbar-toggler:hover ~ .collapse > .navbar-nav {
+    display: block;
   }
 
-  .hero-body {
-    margin-top: 2.25rem;
-    margin-left: 2.5rem;
+  header {
+    height: 25vh;
   }
+
   .hero-body h1 {
-    font-size: 3.5rem;
+    font-size: 5rem;
     width: 50%;
   }
+  .hero-body p {
+    font-size: 1.5rem;
+  }
 
+  #mission {
+    top: 20vh;
+  }
   #mission h2 {
     font-size: 2.75rem;
   }
@@ -9551,27 +9566,29 @@ footer {
     font-size: 1.75rem;
   }
 
+  #news {
+    top: 25vh;
+  }
   #news h2 {
     font-size: 2.75rem;
   }
 
+  #contact {
+    top: 25vh;
+  }
   #contact h2 {
     font-size: 2.75rem;
   }
+
+  footer {
+    top: 25vh;
+  }
 }
 @media (max-width: 767.98px) {
-  .navbar-nav {
-    display: none;
-  }
-
   header {
-    height: 50vh;
+    height: 30vh;
   }
 
-  .hero-body {
-    margin-top: 4.5rem;
-    margin-left: 0.5rem;
-  }
   .hero-body h1 {
     font-size: 2.75rem;
     line-height: 2.75rem;
@@ -9579,6 +9596,10 @@ footer {
   }
   .hero-body p {
     font-size: 1rem;
+  }
+  .hero-body a {
+    font-size: 0.8rem;
+    padding: 0.25 0.5rem;
   }
 
   #mission h2 {
